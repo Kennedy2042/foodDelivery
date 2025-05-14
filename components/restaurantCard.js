@@ -6,7 +6,7 @@ import { useRouter } from 'expo-router';
 
 export default function RestaurantCard({ item }) {
 
-  console.log(item);
+  // console.log(item);
 
 
   const router = useRouter()
@@ -16,14 +16,6 @@ export default function RestaurantCard({ item }) {
     <TouchableWithoutFeedback
       onPress={() => router.push({
         pathname: '/restaurant',
-        // params: {
-        //   id: String(item.id),
-        //   image: item.image,
-        //   name: item.name,
-        //   stars: item.stars,
-        //   reviews: item.reviews,
-        //   address: item.address,
-        // },
         params: {
           item: JSON.stringify(item)
         }
